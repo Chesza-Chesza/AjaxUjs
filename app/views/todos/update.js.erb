@@ -1,0 +1,5 @@
+var elem = document.querySelector(`#todo-<%= @todo.id %>`)
+elem.innerHTML = "<%= j render partial: 'todos/todo-detail', locals: { todo: @todo } %>"
+
+var div = document.querySelector('#todo-content')
+div.innerHTML = ''
