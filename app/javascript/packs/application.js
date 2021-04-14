@@ -12,18 +12,19 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-$.ajax({
-        url: '/todos',
-        type: 'GET',
-        dataType: 'json',
-        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
-    })
-    .done(function(data) {
-        console.log(data);
-    })
-    .fail(function() {
-        console.log("error");
-    })
-    .always(function() {
-        console.log("complete");
-    });
+// $.ajax({
+//         url: '/todos',
+//         type: 'post',
+//         dataType: 'json',
+//         headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+//         data: { "todo": { "content": "Este es un todo creado desde ajax_Js" } },
+//     })
+//     .done(function(data) {
+//         console.log(data);
+//     })
+//     .fail(function() {
+//         console.log("error");
+//     })
+//     .always(function() {
+//         console.log("complete");
+//     });
