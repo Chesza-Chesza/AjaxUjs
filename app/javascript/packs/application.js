@@ -11,3 +11,19 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+$.ajax({
+        url: '/todos',
+        type: 'GET',
+        dataType: 'json',
+        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+    })
+    .done(function(data) {
+        console.log(data);
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
