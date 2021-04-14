@@ -9,6 +9,10 @@ class TodosController < ApplicationController
 
   # GET /todos/1 or /todos/1.json
   def show
+    respond_to do |format|
+      format.js { render layout: false }
+      format.html { render :show }
+    end
   end
 
   # GET /todos/new

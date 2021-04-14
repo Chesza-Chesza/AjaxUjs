@@ -1,0 +1,2 @@
+var elemento = document.querySelector('#todo-content')
+elemento.innerHTML = "<%= escape_javascript(render partial: 'todos/show', locals: {todo: @todo}) %>"
